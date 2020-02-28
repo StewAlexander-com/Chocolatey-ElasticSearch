@@ -22,3 +22,10 @@ How to get Chocolatey parsed by Elastic Search ELK stack...
 * After saving our edits, we started the _filebeat_ service, with the Windows ***Services*** app.
 * After correcting some minor syntax errors, and restarting the filebeat service, our _ElasticSearch Kibana_ client started seeing Chocolatey log information
 * We expect this should work in your environment also, and is a convenient way (if you are using ElasticSearch already) to get notified if packages aren't updating for some reason.
+### What to do if meta files are corrupted in your local Nexus proxy repo:
+* Log in as admin into the Nexus repo web GUI
+* Click the _gear_ icon that appears up next to the search bar
+* Click on the _Repositories_ icon on the left
+* Click on the repository you want to fix (such a _chocolatey_group_)
+* Click on the ***Invalidate cache*** button 
+> This will clear the meta files for the repo, and in the case of a proxy repo, request new meta files from the Chocolatey.org repository, which in our situation cleared the issue.
