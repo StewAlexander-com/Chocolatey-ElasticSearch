@@ -1,5 +1,5 @@
 # Chocolatey-ElasticSearch
-How to get Chocolatey parsed by the Elastic Search ELK stack...
+How to get Chocolatey package manager logs parsed by the Elastic Search ELK stack...
 
 ---
 * First, Chocolatey is an open source package manager for MS Windows, to install it see [here](https://chocolatey.org/install)
