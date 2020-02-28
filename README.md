@@ -17,4 +17,7 @@ How to get Chocolatey parsed by Elastic Search ELK stack...
    * Set ```enabled:``` to **true** 
    * Set ```paths``` to ```C:\ProgramData\chocolatey\logs\chocolatey.log```
    * And for our purposes, set ```exclude_lines:``` to ```['[DEBUG]']```
-   * 
+   * We commented out the ```Elasticsearch Output``` lines, as we wanted to parse the logs via ***LogStash***
+   * We then set the _Logstash Output_ ```hosts:``` to our logstash server and port address
+* After saving our edits, we started the _filebeat_ service, with the Windows ***Services*** app.
+* After correcting some minor syntax errors, and restarting the filebeat service, our _ElasticSearch Kibana_ client started seeing Chocolatey log information
