@@ -21,3 +21,4 @@ How to get Chocolatey parsed by Elastic Search ELK stack...
    * We then set the _Logstash Output_ ```hosts:``` to our logstash server and port address
 * After saving our edits, we started the _filebeat_ service, with the Windows ***Services*** app.
 * After correcting some minor syntax errors, and restarting the filebeat service, our _ElasticSearch Kibana_ client started seeing Chocolatey log information
+* We expect this should work in your environment also, and is a convenient way (if you are using ElasticSearch already) to get notified if packages aren't updating for some reason.
