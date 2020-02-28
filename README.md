@@ -6,7 +6,7 @@ How to get Chocolatey parsed by Elastic Search ELK stack...
 * Why would you want to expose Chocolatey logs to ElasticSearch's ELK stack?
 > We are using Chocolatey to update packages on several thousand machines through a local repository, using Jenkins and Salt in the background, and we noticed once in awhile a nuspec or other meta-file would get hung up, causing something not to not be updated correctly. The issue was, we didn't notice this problem until we went looking.
 
-* In order to fix the issue of knowing whether a meta-file or some other issue was causing systems not to update, we decided to add chocolatey to the repo (thereby it essentially updating itself), where it collected the same files as the other systems (Google Chrome and so forth), and expose the Chocolatey logs via ***ElasticSearch FileBeat*** to our Elk stack.
+* In order to fix the issue of knowing whether a meta-file or some other issue was causing systems not to update, we decided to add chocolatey to the repo (thereby essentially updating itself), where it collected and updated the same files as the other systems (Google Chrome and so forth), and expose the created Chocolatey log entries via ***ElasticSearch FileBeat*** to our Elk stack.
 
 #### Here's How:
 * As said above first we installed Chocolatey onto our Chocolatey Repo Server (We are using a [Nexus Repository](https://www.sonatype.com/nexus-repository-oss) for our local proxy repo, see how to get this running in your environment here: [Setting up Nexus as a local Chocolatey Repo](https://www.youtube.com/watch?v=UehkG1VHtz0))
